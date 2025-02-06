@@ -1,16 +1,24 @@
 .container{
     display: flex;
     justify-content: space-between;
-    background-color: #9E1B32;
+    background-color: #DE0B27;
     align-items: center;
 }
 
 
 /* Menu */
+.logo_nav h1{
+    margin: 20px;
+    color: aliceblue;
+}
+.logo{
+    width: 35%;
+    margin: 10px;
+}
 .nav_menu ul  {
     display: flex;
     list-style-type: none;
 }
 .nav_menu ul li {
-
+padding: 20px;
 }
