@@ -1,24 +1,86 @@
-.container{
+.container {
     display: flex;
     justify-content: space-between;
     background-color: #DE0B27;
     align-items: center;
 }
 
+/* Media query para telas maiores que 1500px */
+@media (min-width: 1500px) {
+    .container {
+        justify-content: space-around;
+    }
+    .logo{
+    width: 50%;
+    margin: 10px;
+    }
+}
 
 /* Menu */
-.logo_nav h1{
+.logo_nav h1 {
     margin: 20px;
     color: aliceblue;
 }
-.logo{
-    width: 35%;
+
+.logo {
+    width: 28%;
     margin: 10px;
+    padding-left: 50px;
 }
-.nav_menu ul  {
-    display: flex;
+
+.nav_menu ul {
     list-style-type: none;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
 }
+
 .nav_menu ul li {
-padding: 20px;
+    padding: 20px;
+}
+
+.nav_menu ul li::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #f44336;
+    display: block;
+    transition: 0.5s;
+}
+
+/* Estilo para o link normal */
+.nav_menu a {
+    text-decoration: none;
+    color: aliceblue;
+    position: relative; /* Necessário para o pseudo-elemento */
+    padding-bottom: 10px; /* Ajuste do espaço entre o texto e a linha */
+}
+
+/* Estilo do pseudo-elemento */
+a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: aliceblue;
+    display: block;
+    position: absolute;
+    bottom: 0; /* Fixa na parte inferior do link */
+    left: 0;
+    transition: 0.5s;
+}
+
+/* Efeito quando o link é hoverizado */
+a:hover::after {
+    width: 100%;
+}
+
+/* Estilo para a classe 'active' - sem transição */
+.nav_menu a.active::after {
+    width: 100%; /* A linha vai aparecer imediatamente sem transição */
+    transition: none; /* Desabilita a transição */
+}
+
+/* Estilo para o link ativo */
+.nav_menu a.active {
+    color: aliceblue; /* Cor do link ativo, você pode ajustar a cor */
 }
