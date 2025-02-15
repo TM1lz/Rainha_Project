@@ -1,0 +1,100 @@
+.i {
+    background-color: #f5efeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrosel {
+}
+
+.container {
+    /* Outras propriedades para o container, se necessário */
+}
+
+.box_hamb, .box_almdg, .box_custom {
+    margin: 20px;
+    display: flex;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 80%;
+    max-width: 1000px;
+    transition: all 0.3s ease;
+}
+
+/* Para o primeiro Box */
+.box_hamb {
+    flex-direction: row; /* Descrição à esquerda e imagem à direita */
+}
+
+/* Para o segundo Box (do meio) - Inverte a posição */
+.box_almdg {
+    flex-direction: row-reverse; /* Descrição à direita e imagem à esquerda */
+}
+
+/* Para o terceiro Box */
+.box_custom {
+    flex-direction: row; /* Descrição à esquerda e imagem à direita */
+}
+
+.desc_hamb, .desc_almdg, .desc_custom {
+    padding: 30px;  /* Menos padding para dar mais espaço ao conteúdo */
+    flex: 1;
+    color: #333;
+    display: flex;
+    flex-direction: column; /* Garante que o texto não fique comprimido */
+}
+
+.desc_hamb h2, .desc_almdg h2, .desc_custom h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #0066cc;
+}
+
+.desc_hamb p, .desc_almdg p, .desc_custom p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;  /* Adiciona um pouco mais de espaço entre parágrafos */
+}
+
+.img_hamb, .img_custom {
+    width: 60%; /* Reduz a largura das imagens para dar mais espaço ao texto */
+    height: auto;
+    background-image: url('https://via.placeholder.com/300');
+    background-size: cover;
+    background-position: center;
+    border-left: 5px solid #ddd; /* Borda ocupa toda a altura da imagem */
+}
+
+.img_almdg {
+    width: 60%; /* Reduz a largura das imagens para dar mais espaço ao texto */
+    height: auto;
+    background-image: url('https://via.placeholder.com/300');
+    background-size: cover;
+    background-position: center;
+    border-right: 5px solid #ddd; /* Borda ocupa toda a altura da imagem */
+}
+
+/* Garantindo que os elementos dentro de cada box se alinhem corretamente */
+.box_hamb .desc_hamb, .box_almdg .desc_almdg, .box_custom .desc_custom,
+.box_hamb .img_hamb, .box_almdg .img_almdg, .box_custom .img_custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+    .box_hamb, .box_almdg, .box_custom {
+        flex-direction: column; /* Para telas menores, empilhamos os elementos */
+    }
+
+    .img_hamb, .img_almdg, .img_custom {
+        margin-top: 20px;
+        width: 100%;  /* Aumenta as imagens para 100% da largura em telas menores */
+    }
+}
