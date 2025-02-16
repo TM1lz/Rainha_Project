@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import Carrossel from './components/Carrossel';
 import Home from './pages/home/Home';
+
+
 function App() {
   return (
     <Router> {/* Envolva tudo no Router */}

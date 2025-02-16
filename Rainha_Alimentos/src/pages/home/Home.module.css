@@ -6,11 +6,81 @@
     justify-content: center;
 }
 
-.carrosel {
+.desc_rainha {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+    padding: 30px;
+    background-color: #DE0B27;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1000px;
+    transition: all 0.3s ease;
 }
 
-.container {
-    /* Outras propriedades para o container, se necessário */
+.desc_rainha img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 30px;
+}
+
+.desc_rainha h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+.desc_rainha p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.desc_rainha button {
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.desc_rainha button:hover {
+    background-color: #005bb5;
+}
+
+@media (max-width: 768px) {
+    .desc_rainha {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .desc_rainha img {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    .desc_rainha h1 {
+        font-size: 2rem;
+    }
+
+    .desc_rainha p {
+        font-size: 1rem;
+    }
+
+    .desc_rainha button {
+        width: 100%;
+        font-size: 1rem;
+    }
 }
 
 .box_hamb, .box_almdg, .box_custom {
@@ -25,27 +95,16 @@
     transition: all 0.3s ease;
 }
 
-/* Para o primeiro Box */
-.box_hamb {
-    flex-direction: row; /* Descrição à esquerda e imagem à direita */
-}
-
-/* Para o segundo Box (do meio) - Inverte a posição */
-.box_almdg {
-    flex-direction: row-reverse; /* Descrição à direita e imagem à esquerda */
-}
-
-/* Para o terceiro Box */
-.box_custom {
-    flex-direction: row; /* Descrição à esquerda e imagem à direita */
-}
+.box_hamb { flex-direction: row; }
+.box_almdg { flex-direction: row-reverse; }
+.box_custom { flex-direction: row; }
 
 .desc_hamb, .desc_almdg, .desc_custom {
-    padding: 30px;  /* Menos padding para dar mais espaço ao conteúdo */
+    padding: 30px;
     flex: 1;
     color: #333;
     display: flex;
-    flex-direction: column; /* Garante que o texto não fique comprimido */
+    flex-direction: column;
 }
 
 .desc_hamb h2, .desc_almdg h2, .desc_custom h2 {
@@ -58,28 +117,19 @@
     font-size: 1.1rem;
     line-height: 1.6;
     color: #555;
-    margin-bottom: 10px;  /* Adiciona um pouco mais de espaço entre parágrafos */
+    margin-bottom: 10px;
 }
 
-.img_hamb, .img_custom {
-    width: 60%; /* Reduz a largura das imagens para dar mais espaço ao texto */
+.img_hamb, .img_custom, .img_almdg {
+    width: 60%;
     height: auto;
-    background-image: url('https://via.placeholder.com/300');
     background-size: cover;
     background-position: center;
-    border-left: 5px solid #ddd; /* Borda ocupa toda a altura da imagem */
 }
 
-.img_almdg {
-    width: 60%; /* Reduz a largura das imagens para dar mais espaço ao texto */
-    height: auto;
-    background-image: url('https://via.placeholder.com/300');
-    background-size: cover;
-    background-position: center;
-    border-right: 5px solid #ddd; /* Borda ocupa toda a altura da imagem */
-}
+.img_hamb { border-left: 5px solid #ddd; }
+.img_almdg { border-right: 5px solid #ddd; }
 
-/* Garantindo que os elementos dentro de cada box se alinhem corretamente */
 .box_hamb .desc_hamb, .box_almdg .desc_almdg, .box_custom .desc_custom,
 .box_hamb .img_hamb, .box_almdg .img_almdg, .box_custom .img_custom {
     display: flex;
@@ -87,14 +137,13 @@
     justify-content: center;
 }
 
-/* Responsividade para dispositivos menores */
 @media (max-width: 768px) {
     .box_hamb, .box_almdg, .box_custom {
-        flex-direction: column; /* Para telas menores, empilhamos os elementos */
+        flex-direction: column;
     }
 
     .img_hamb, .img_almdg, .img_custom {
         margin-top: 20px;
-        width: 100%;  /* Aumenta as imagens para 100% da largura em telas menores */
+        width: 100%;
     }
 }

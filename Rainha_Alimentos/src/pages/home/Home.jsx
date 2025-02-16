@@ -1,5 +1,6 @@
 import Carrosel from "../../components/Carrossel";
 import styler from "./Home.module.css";
+import img from '../../assets/logoC.png';
 
 export default function Home() {
   return (
@@ -8,7 +9,12 @@ export default function Home() {
         <Carrosel />
       </div>
       <div className={styler.container}></div>
-      
+      <div className={styler.desc_rainha}>
+        <img src={img} width={500}/>
+        <h1>SEJA NOSSO REPRESENTANTE</h1>
+        <p>
+        Junte-se a Rainha Alimentos e faça parte de uma empresa comprometida, onde cada parceria é valorizada, capacitada e inspirada a alcançar o sucesso. Clique no botão abaixo e entre em contato conosco.</p> <button>CLICK</button>
+      </div>
       {/* Primeiro Box */}
       <div className={styler.box_hamb}>
         <div className={styler.desc_hamb}>
