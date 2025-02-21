@@ -13,7 +13,7 @@ export default function NavBar() {
           <li>
             <NavLink 
               to='/' 
-              className={({ isActive }) => (isActive ? styler.active : '')}
+              className={({ isActive }) => (isActive ? styler.active : 'o')}
             >
               Home
             </NavLink>
@@ -21,7 +21,7 @@ export default function NavBar() {
           <li>
             <NavLink 
               to='/company' 
-              className={({ isActive }) => (isActive ? styler.active : '')}
+              className={({ isActive }) => (isActive ? styler.active : 'o')}
             >
               Empresa
             </NavLink>
@@ -29,7 +29,7 @@ export default function NavBar() {
           <li>
             <NavLink 
               to='/product' 
-              className={({ isActive }) => (isActive ? styler.active : '')}
+              className={({ isActive }) => (isActive ? styler.active : 'o')}
             >
               Produtos
             </NavLink>
@@ -37,7 +37,7 @@ export default function NavBar() {
           <li>
             <NavLink 
               to='/conect' 
-              className={({ isActive }) => (isActive ? styler.active : '')}
+              className={({ isActive }) => (isActive ? styler.active : 'o')}
             >
               Contato
             </NavLink>

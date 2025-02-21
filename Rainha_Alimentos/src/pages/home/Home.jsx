@@ -1,6 +1,11 @@
 import Carrosel from "../../components/Carrossel";
 import styler from "./Home.module.css";
 import img from '../../assets/logoC.png';
+import { NavLink } from "react-router-dom";
+
+import almdg from '../../assets/wall.img/amlgjpeg.jpg';
+import hambg from '../../assets/wall.img/hambjpeg.jpg';
+import kibe from '../../assets/wall.img/kibejpeg.jpg';
 
 export default function Home() {
   return (
@@ -9,52 +14,63 @@ export default function Home() {
         <Carrosel />
       </div>
       <div className={styler.container}></div>
+      
       <div className={styler.desc_rainha}>
-        <img src={img} width={500}/>
+        <img src={img} width={500} alt="Logo" />
         <h1>SEJA NOSSO REPRESENTANTE</h1>
         <p>
-        Junte-se a Rainha Alimentos e faça parte de uma empresa comprometida, onde cada parceria é valorizada, capacitada e inspirada a alcançar o sucesso. Clique no botão abaixo e entre em contato conosco.</p> <button>CLICK</button>
-      </div>
-      {/* Primeiro Box */}
-      <div className={styler.box_hamb}>
-        <div className={styler.desc_hamb}>
-          <h2>Título da Descrição</h2>
-          <p>
-            Essa é uma descrição ao lado da imagem. O layout foi feito para ser
-            limpo e agradável. A ideia é que, ao lado de cada texto, tenha uma
-            imagem que represente visualmente o conteúdo de maneira atraente e
-            interessante.
-          </p>
-        </div>
-        <div className={styler.img_hamb}></div>
+          Faça parte da Rainha Alimentos, uma empresa que valoriza qualidade e tradição.  
+          Como nosso representante, você terá acesso a produtos de alta excelência, suporte dedicado  
+          e uma parceria sólida para impulsionar seus negócios.  
+        </p>
+        <NavLink to='/teste' className={styler.botao}>QUERO SABER MAIS</NavLink>
       </div>
 
-      {/* Segundo Box */}
+      <h2 className={styler.produtos_destaque}>Produtos em Destaque</h2>
+
+      <div className={styler.box_hamb}>
+        <div className={styler.desc_hamb}>
+          <h2>HAMBÚRGUER ARTESANAL</h2>
+          <p>
+            Feito com ingredientes selecionados e carne 100% bovina, nosso hambúrguer traz o sabor  
+            irresistível da tradição. Suculento, macio e perfeito para qualquer ocasião,  
+            é a escolha ideal para quem busca qualidade e sabor incomparáveis.
+          </p>
+          <NavLink to="/hamburguer" className={styler.botao}>SAIBA MAIS</NavLink>
+        </div>
+        <div className={styler.img_hamb}>
+          <img src={hambg} alt="Hambúrguer Artesanal" />
+        </div>
+      </div>
+
       <div className={styler.box_almdg}>
         <div className={styler.desc_almdg}>
           <p>
-            Essa é uma descrição ao lado da imagem. O layout foi feito para ser
-            limpo e agradável. A ideia é que, ao lado de cada texto, tenha uma
-            imagem que represente visualmente o conteúdo de maneira atraente e
-            interessante.
+            Nossas almôndegas são preparadas com temperos exclusivos e carne de altíssima qualidade.  
+            Versáteis e deliciosas, são perfeitas para acompanhar massas, sanduíches ou mesmo para  
+            serem saboreadas sozinhas. Surpreenda-se com essa explosão de sabor!
           </p>
-          <h2>Título da Descrição</h2>
+          <h2>ALMÔNDEGAS SABOROSAS</h2>
+          <NavLink to="/almondiga" className={styler.botao}>SAIBA MAIS</NavLink>
         </div>
-        <div className={styler.img_almdg}></div>
+        <div className={styler.img_almdg}>
+          <img src={almdg} alt="Almôndegas Saborosas" />
+        </div>
       </div>
 
-      {/* Terceiro Box */}
       <div className={styler.box_custom}>
         <div className={styler.desc_custom}>
-          <h2>Título da Descrição</h2>
+          <h2>KIBE CROCANTE</h2>
           <p>
-            Essa é uma descrição ao lado da imagem. O layout foi feito para ser
-            limpo e agradável. A ideia é que, ao lado de cada texto, tenha uma
-            imagem que represente visualmente o conteúdo de maneira atraente e
-            interessante.
+            Inspirado na autêntica culinária árabe, nosso kibe combina crocância por fora e  
+            um recheio suculento por dentro. Feito com trigo especial e temperos selecionados,  
+            é uma opção deliciosa para qualquer momento do dia.
           </p>
+          <NavLink to="/kibe" className={styler.botao}>SAIBA MAIS</NavLink>
         </div>
-        <div className={styler.img_custom}></div>
+        <div className={styler.img_custom}>
+          <img src={kibe} alt="Kibe Crocante" />
+        </div>
       </div>
     </div>
   );

@@ -57,7 +57,7 @@
 }
 
 /* Estilo do pseudo-elemento */
-a::after {
+.nav_menu a::after {
     content: '';
     width: 0%;
     height: 3px;
@@ -70,7 +70,7 @@ a::after {
 }
 
 /* Efeito quando o link é hoverizado */
-a:hover::after {
+.nav_menu a:hover::after {
     width: 100%;
 }
 
