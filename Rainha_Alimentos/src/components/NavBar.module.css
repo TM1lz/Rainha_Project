@@ -10,9 +10,9 @@
     .container {
         justify-content: space-around;
     }
-    .logo{
-    width: 50%;
-    margin: 10px;
+    .logo {
+        width: 50%;
+        margin: 10px;
     }
 }
 
@@ -83,4 +83,49 @@
 /* Estilo para o link ativo */
 .nav_menu a.active {
     color: aliceblue; /* Cor do link ativo, você pode ajustar a cor */
+}
+
+/* Media query para telas pequenas */
+@media (max-width: 680px) {
+    .container{
+        justify-content: space-evenly;
+    }
+    .logo {
+        width: 28%;
+        margin: 0px;
+        padding: 10px;
+    }
+    .nav_menu ul {
+        display: none; /* Esconde o menu em telas pequenas */
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #DE0B27;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        z-index: 1;
+    }
+
+    .nav_menu.open ul {
+        display: flex; /* Exibe o menu quando 'open' estiver ativo */
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .line {
+        background-color: aliceblue;
+        height: 3px;
+        width: 100%;
+        border-radius: 5px;
+    }
 }

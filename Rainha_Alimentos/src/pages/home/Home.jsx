@@ -1,11 +1,11 @@
 import Carrosel from "../../components/Carrossel";
 import styler from "./Home.module.css";
-import img from '../../assets/logoC.png';
 import { NavLink } from "react-router-dom";
 
 import almdg from '../../assets/wall.img/amlgjpeg.jpg';
 import hambg from '../../assets/wall.img/hambjpeg.jpg';
 import kibe from '../../assets/wall.img/kibejpeg.jpg';
+import TesteCard from "../../components/BemVindoCard";
 
 export default function Home() {
   return (
@@ -14,18 +14,7 @@ export default function Home() {
         <Carrosel />
       </div>
       <div className={styler.container}></div>
-      
-      <div className={styler.desc_rainha}>
-        <img src={img} width={500} alt="Logo" />
-        <h1>SEJA NOSSO REPRESENTANTE</h1>
-        <p>
-          Faça parte da Rainha Alimentos, uma empresa que valoriza qualidade e tradição.  
-          Como nosso representante, você terá acesso a produtos de alta excelência, suporte dedicado  
-          e uma parceria sólida para impulsionar seus negócios.  
-        </p>
-        <NavLink to='/teste' className={styler.botao}>QUERO SABER MAIS</NavLink>
-      </div>
-
+      <TesteCard></TesteCard>
       <h2 className={styler.produtos_destaque}>Produtos em Destaque</h2>
 
       <div className={styler.box_hamb}>
