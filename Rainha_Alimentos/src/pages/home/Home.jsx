@@ -2,6 +2,7 @@ import Carrosel from "../../components/Carrossel";
 import styler from "./Home.module.css";
 import { NavLink } from "react-router-dom";
 
+import img from '../../assets/logo.png';
 import almdg from '../../assets/wall.img/amlgjpeg.jpg';
 import hambg from '../../assets/wall.img/hambjpeg.jpg';
 import kibe from '../../assets/wall.img/kibejpeg.jpg';
@@ -61,6 +62,16 @@ export default function Home() {
           <img src={kibe} alt="Kibe Crocante" />
         </div>
       </div>
+      <div className={styler.desc_rainha}>
+            <img src={img} width={500} alt="Logo" />
+            <h1>SEJA NOSSO REPRESENTANTE</h1>
+            <p>
+              Faça parte da Rainha Alimentos, uma empresa que valoriza qualidade e tradição.  
+              Como nosso representante, você terá acesso a produtos de alta excelência, suporte dedicado  
+              e uma parceria sólida para impulsionar seus negócios.  
+            </p>
+            <NavLink to='/teste' className={styler.botao}>QUERO SABER MAIS</NavLink>
+          </div>
     </div>
   );
 }

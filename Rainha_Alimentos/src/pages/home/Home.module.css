@@ -49,9 +49,8 @@
 .desc_rainha img {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
+    width: 20%;
     height: auto;
-    border-radius: 10px;
 }
 
 .desc_rainha h1 {

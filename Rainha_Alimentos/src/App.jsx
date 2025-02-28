@@ -1,10 +1,12 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './pages/home/Home';
+import Footer from './components/Footer';
 
 
 function App() {
   return (
+    <>
     <Router> {/* Envolva tudo no Router */}
       <div className="container-app">
         <NavBar />       
@@ -16,6 +18,8 @@ function App() {
         </Routes>
       </div>
     </Router>
+    <Footer/>
+    </>
   );
 }
 
