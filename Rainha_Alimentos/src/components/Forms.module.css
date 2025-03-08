@@ -1,0 +1,177 @@
+/* Removendo rolagem lateral */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Container principal */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease;
+  width: 90%;
+  box-sizing: border-box; /* Impede que padding aumente a largura total */
+}
+
+/* Título */
+h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Grid layout para os campos */
+.formRow, .formRow2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Dividir em 3 colunas */
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+/* Ajuste para os grupos de campos */
+.formRow .formGroup,
+.formRow2 .formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+/* Ajuste para a linha de mensagem */
+.formGroupMessage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* Label */
+.formGroup label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #444;
+  font-weight: 600;
+}
+
+/* Estilo dos inputs e textarea */
+.formGroup input,
+.formGroup textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Estilo quando o input está em foco */
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Ajuste para o textarea */
+.formGroup textarea {
+  height: 250px; /* Altura fixa */
+  resize: none; /* Desabilita o redimensionamento */
+  font-size: 16px;
+  overflow-x: hidden; /* Impede rolagem horizontal */
+  word-wrap: break-word; /* Garante quebra de linha correta */
+}
+
+/* Texto de erro */
+.errorText {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Botão de envio */
+.submitButton {
+  background-color: #007BFF;
+  color: white;
+  padding: 14px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* Efeito de hover no botão */
+.submitButton:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Efeito de click no botão */
+.submitButton:active {
+  background-color: #004085;
+  transform: translateY(1px);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .form {
+      padding: 20px;
+      margin: 20px;
+      width: 95%;
+  }
+
+  /* Ajustando para telas menores */
+  .formRow,
+  .formRow2 {
+      grid-template-columns: 1fr; /* Muda para apenas uma coluna */
+  }
+
+  .formGroup {
+      margin-bottom: 20px;
+  }
+
+  .submitButton {
+      margin-top: 20px;
+  }
+}
+
+/* Ajustes extras para celulares muito pequenos (max-width: 480px) */
+@media (max-width: 480px) {
+  .form {
+      padding: 15px;
+      width: 100%;
+  }
+
+  h2 {
+      font-size: 28px;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+      padding: 10px;
+      font-size: 14px;
+  }
+
+  .submitButton {
+      padding: 12px 16px;
+      font-size: 16px;
+  }
+}
