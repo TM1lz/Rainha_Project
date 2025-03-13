@@ -1,0 +1,173 @@
+/* HambInfo.module.css */
+
+/* Container principal */
+.container {
+    max-width: 1000px;
+    max-height: 100%;
+    margin: 2% auto;
+    padding: 40px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Título principal */
+  .title {
+    font-size: 2.5rem;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  /* Subtítulo */
+  .subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Contêiner dos hambúrgueres */
+  .burgerContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  /* Estilos para cada hambúrguer */
+  .burger {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px; /* Largura do círculo */
+    height: 120px; /* Altura do círculo */
+    border-radius: 50%; /* Faz o hambúrguer ficar circular */
+    transition: background-color 0.3s ease;
+    line-height: 1;
+  }
+  
+  
+  /* Cor de fundo específica para os tipos de hambúrguer */
+  .burgerRed {
+    background-color: #f44336;
+  }
+  
+  .burgerBlue {
+    background-color: #2196f3;
+  }
+  
+  /* Container de texto */
+  .textContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  /* Bloco de texto */
+  .textBlock {
+    width: 48%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Conteúdo textual */
+  .textContent {
+    margin-bottom: 20px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .text {
+    font-size: 1.1rem;
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+    margin-top: 10px;
+  }
+  
+  /* Estilos da imagem */
+  .image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .subtitle {
+      font-size: 1rem;
+    }
+  
+    .burgerContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .burger {
+      font-size: 1.3rem;
+      padding: 15px;
+      width: 100px; /* Ajuste o tamanho do círculo em telas menores */
+      height: 100px;
+    }
+  
+    .textContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .textBlock {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  
+    .sectionTitle {
+      font-size: 1.6rem;
+    }
+  
+    .text {
+      font-size: 1rem;
+    }
+  
+    .description {
+      font-size: 0.9rem;
+    }
+  }
+  

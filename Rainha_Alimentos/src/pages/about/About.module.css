@@ -1,6 +1,5 @@
 /* Container principal */
 .container {
-    display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
@@ -16,6 +15,7 @@
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    margin: 30px auto;
   }
   
   /* Imagem da empresa */
@@ -32,6 +32,7 @@
     max-width: 100%;
     height: auto;
   }
+
   
   /* Texto */
   .textContainer {
@@ -70,7 +71,6 @@
     margin-bottom: 20px;
   }
   
-  /* Grid de logos */
   .logoGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -85,7 +85,6 @@
     object-fit: cover;
     border-radius: 5px;
   }
-  
   /* Responsividade */
   @media (max-width: 1024px) {
     .content {

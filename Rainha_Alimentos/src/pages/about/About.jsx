@@ -1,6 +1,7 @@
 import styles from './About.module.css';
 
 import img from '../../assets/logo.png';
+import brasilMap from "../../assets/BrasilMaps.png";
 const logos = [
   "https://www.rainhaalimentos.ind.br/public/arquivos/upload/4c4cbd55ac1604e2921a7a2ca4672580.jpg",
   "https://www.rainhaalimentos.ind.br/public/arquivos/upload/049b944fd82e47d0b9d3233ab197c137.jpg",
@@ -40,7 +41,32 @@ const About = () => {
           </p>
         </div>
       </div>
+      <div className={styles.content}>
+      <div className={styles.textContainer}>
+        <h1>A Rainha Alimentos</h1>
+        <p>
+          A Rainha Alimentos tem o prazer de atender todo o Brasil, levando o sabor e a qualidade dos nossos produtos a cada canto do país. Com a paixão pela culinária e um toque de inovação tecnológica, nos dedicamos a fornecer alimentos industrializados que aliam praticidade e sabor para a sua mesa.
+        </p>
+        <p>
+          Nossa empresa se destaca pela expertise de uma equipe formada por profissionais qualificados, desde especialistas em gastronomia até engenheiros de alimentos, que trabalham incansavelmente para garantir que todos os nossos produtos atendam aos mais elevados padrões de qualidade e segurança alimentar.
+        </p>
+        <p>
+          Acreditamos que qualidade é essencial em todos os processos, desde a produção até a entrega. Nosso compromisso com a sustentabilidade também é uma prioridade, pois buscamos continuamente reduzir nosso impacto ambiental, sem abrir mão do sabor e da confiança que nossos clientes esperam.
+        </p>
+        <p>
+          Com a Rainha Alimentos, você pode saborear o melhor da culinária brasileira, onde quer que esteja!
+        </p>
+      </div>
+
+      <div className={styles.image}>
+        <img
+          src={brasilMap}
+          alt="Rainha Alimentos"
+        />
+      </div>
     </div>
+    </div>
+    
     <div className={styles.card}>
     <h2 className={styles.title}>Experiência de Mercado</h2>
       <p className={styles.description}>
@@ -52,6 +78,7 @@ const About = () => {
         ))}
       </div>
     </div>
+    
     </>
   );
 };
