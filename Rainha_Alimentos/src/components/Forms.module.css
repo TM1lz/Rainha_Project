@@ -19,7 +19,7 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   font-family: 'Arial', sans-serif;
   transition: background-color 0.3s ease;
-  width: 90%;
+  height: 80vh;
   box-sizing: border-box; /* Impede que padding aumente a largura total */
 }
 
@@ -86,6 +86,10 @@ h2 {
 .formGroup textarea:focus {
   border-color: #007BFF;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+textarea{
+  height: 155px;
+  width: 99%;
 }
 
 /* Ajuste para o textarea */
@@ -158,8 +162,12 @@ h2 {
   .form {
       padding: 15px;
       width: 100%;
+      
   }
-
+  textarea{
+    height:10%;
+    width: 10%;
+  }
   h2 {
       font-size: 28px;
   }

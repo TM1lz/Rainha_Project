@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import About from './pages/about/About';
 import Contact from './pages/Contact/Contact';
 import HambInfo from './components/HambInfo';
+import Dont_Fout from './pages/Product/Dont_Fout';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Routes> 
           <Route path="/" element = {<Home/>} />
           <Route path="/company" element= {<About/>} />
+          <Route path="/product" element={<Dont_Fout/>}/> 
           <Route path="/conect" element={<Contact/>}/> 
           <Route path="/hamburguer" element={<HambInfo/>}/> 
         </Routes>

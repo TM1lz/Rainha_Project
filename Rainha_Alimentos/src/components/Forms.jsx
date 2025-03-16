@@ -1,23 +1,46 @@
-import styler from "./Forms.module.css";
 import { useForm } from "react-hook-form";
+import { useState } from "react";
+import styler from "./Forms.module.css";
 
 export default function Forms() {
     const {
         register,
         handleSubmit,
         formState: { errors },
+        reset
     } = useForm();
 
-    const onSubmit = (data) => {
-        console.log(data);
-        alert("Formulário enviado com sucesso!");
+    const [responseMessage, setResponseMessage] = useState(null); // <- Aqui vamos guardar a resposta
+
+    const onSubmit = async (data) => {
+        try {
+            const response = await fetch("http://localhost:3080/clients", { // URL do backend
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            const result = await response.json(); // Pega o JSON
+
+            if (response.ok) {
+                setResponseMessage(result.message); // Mostra mensagem de sucesso
+                reset(); // Limpa o formulário
+            } else {
+                setResponseMessage(`Erro: ${result.error}`);
+            }
+
+        } catch (error) {
+            setResponseMessage(`Erro na conexão: ${error.message}`);
+        }
     };
 
     return (
         <div className={styler.form}>
             <h2>Cadastro</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-                {/* Primeira linha (Razão Social, CPF/CNPJ, Nome) */}
+                {/* Primeira linha */}
                 <div className={styler.formRow}>
                     <div className={styler.formGroup}>
                         <label>Razão Social</label>
@@ -38,7 +61,7 @@ export default function Forms() {
                     </div>
                 </div>
 
-                {/* Segunda linha (Cidade, Email, Telefone) */}
+                {/* Segunda linha */}
                 <div className={styler.formRow2}>
                     <div className={styler.formGroup}>
                         <label>Cidade</label>
@@ -59,7 +82,7 @@ export default function Forms() {
                     </div>
                 </div>
 
-                {/* Linha com Mensagem */}
+                {/* Mensagem */}
                 <div className={styler.formGroupMessage}>
                     <label>Mensagem</label>
                     <textarea {...register("mensagem", { required: true })}></textarea>
@@ -68,6 +91,13 @@ export default function Forms() {
 
                 <button type="submit" className={styler.submitButton}>Enviar</button>
             </form>
+
+            {/* Aqui mostramos a resposta */}
+            {responseMessage && (
+                <div className={styler.responseMessage}>
+                    <p>{responseMessage}</p>
+                </div>
+            )}
         </div>
     );
 }
