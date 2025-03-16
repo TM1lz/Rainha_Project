@@ -41,7 +41,7 @@ export default function Home() {
             serem saboreadas sozinhas. Surpreenda-se com essa explosão de sabor!
           </p>
           <h2>ALMÔNDEGAS SABOROSAS</h2>
-          <NavLink to="/almondiga" className={styler.botao}>SAIBA MAIS</NavLink>
+          <NavLink to="/almondega" className={styler.botao}>SAIBA MAIS</NavLink>
         </div>
         <div className={styler.img_almdg}>
           <img src={almdg} alt="Almôndegas Saborosas" />
@@ -70,7 +70,7 @@ export default function Home() {
               Como nosso representante, você terá acesso a produtos de alta excelência, suporte dedicado  
               e uma parceria sólida para impulsionar seus negócios.  
             </p>
-            <NavLink to='/teste' className={styler.botao}>QUERO SABER MAIS</NavLink>
+            <NavLink to='/teste' className={styler.botao}>JUNTE-SE </NavLink>
           </div>
     </div>
   );

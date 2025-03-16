@@ -1,7 +1,7 @@
-import React from "react";
+
 import styles from "./HambInfo.module.css";
-import imgHambBovino from "../assets/wall.img/hambjpeg.jpg";
-import imgHambMisto from "../assets/wall.img/hambjpeg.jpg";
+import imgHambBovino from "../../assets/wall.img/hambjpeg.jpg";
+import imgHambMisto from "../../assets/wall.img/hambmistojpeg.jpg";
 
 const HambInfo = () => {
   const burgers = [

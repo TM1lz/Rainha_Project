@@ -21,8 +21,6 @@ const BemVindoCard = () => {
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
             style={{ width: '50px', height: '50px', fill: '#fff', transform: 'rotate(0deg)', transition: 'transform 0.3s ease-in-out' }}
-            onMouseEnter={(e) => e.target.style.transform = 'rotate(180deg)'}
-            onMouseLeave={(e) => e.target.style.transform = 'rotate(0deg)'}
           >
             <path d="M12 19l-7-7 1.41-1.41L12 16.17l5.59-5.58L19 12z" />
           </svg>

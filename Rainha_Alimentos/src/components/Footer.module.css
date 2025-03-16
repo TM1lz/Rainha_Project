@@ -9,6 +9,7 @@ footer {
 }
 .pa {
     margin: 0px 10px 0px 10px;
+    max-width: 25%;
 }
 .location {
     margin-top: 10px;
