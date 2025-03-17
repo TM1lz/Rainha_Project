@@ -28,11 +28,12 @@ export default function Forms() {
                 setResponseMessage(result.message); // Mostra mensagem de sucesso
                 reset(); // Limpa o formulário
             } else {
-                setResponseMessage(`Erro: ${result.error}`);
+                setResponseMessage("Erro ao enviar formulário"); // Mostra mensagem de erro
             }
 
         } catch (error) {
-            setResponseMessage(`Erro na conexão: ${error.message}`);
+            setResponseMessage("Erro ao enviar formulário verifique sua conexão");
+            console.log(error) // Mostra mensagem de erro
         }
     };
 
@@ -85,7 +86,7 @@ export default function Forms() {
                 {/* Mensagem */}
                 <div className={styler.formGroupMessage}>
                     <label>Mensagem</label>
-                    <textarea {...register("mensagem", { required: true })}></textarea>
+                    <textarea className={styler.textmsg} {...register("mensagem", { required: true })}></textarea>
                     {errors.mensagem && <p className={styler.errorText}>Campo obrigatório</p>}
                 </div>
 

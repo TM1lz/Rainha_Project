@@ -13,43 +13,43 @@ body {
   align-items: center;
   padding: 40px;
   max-width: 900px;
+  width: 90%;
   margin: 50px auto;
   background-color: #f9f9f9;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   font-family: 'Arial', sans-serif;
   transition: background-color 0.3s ease;
-  height: 80vh;
-  box-sizing: border-box; /* Impede que padding aumente a largura total */
+  box-sizing: border-box;
 }
 
 /* Título */
 h2 {
-  font-size: 36px;
+  font-size: 32px;
   margin-bottom: 30px;
   color: #333;
   font-weight: bold;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 /* Grid layout para os campos */
 .formRow, .formRow2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* Dividir em 3 colunas */
+  display: flex;
   gap: 20px;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
   box-sizing: border-box;
 }
 
 /* Ajuste para os grupos de campos */
-.formRow .formGroup,
-.formRow2 .formGroup {
+.formGroup {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 /* Ajuste para a linha de mensagem */
@@ -57,18 +57,19 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
 }
 
 /* Label */
 .formGroup label {
   font-size: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: #444;
   font-weight: 600;
 }
 
-/* Estilo dos inputs e textarea */
+/* Inputs e textarea */
 .formGroup input,
 .formGroup textarea {
   padding: 12px;
@@ -81,24 +82,18 @@ h2 {
   box-sizing: border-box;
 }
 
-/* Estilo quando o input está em foco */
 .formGroup input:focus,
 .formGroup textarea:focus {
   border-color: #007BFF;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
-textarea{
-  height: 155px;
-  width: 99%;
-}
 
 /* Ajuste para o textarea */
 .formGroup textarea {
-  height: 250px; /* Altura fixa */
-  resize: none; /* Desabilita o redimensionamento */
-  font-size: 16px;
-  overflow-x: hidden; /* Impede rolagem horizontal */
-  word-wrap: break-word; /* Garante quebra de linha correta */
+  resize: vertical;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  min-height: 150px;
 }
 
 /* Texto de erro */
@@ -108,7 +103,7 @@ textarea{
   margin-top: 5px;
 }
 
-/* Botão de envio */
+/* Botão */
 .submitButton {
   background-color: #007BFF;
   color: white;
@@ -119,67 +114,65 @@ textarea{
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
-/* Efeito de hover no botão */
 .submitButton:hover {
   background-color: #0056b3;
   transform: translateY(-2px);
 }
 
-/* Efeito de click no botão */
 .submitButton:active {
   background-color: #004085;
   transform: translateY(1px);
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  .form {
-      padding: 20px;
-      margin: 20px;
-      width: 95%;
-  }
+/* Mensagem de resposta */
+.responseMessage {
+  margin-top: 20px;
+  background-color: #e0f7fa;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  color: #007BFF;
+  font-weight: 600;
+}
 
-  /* Ajustando para telas menores */
-  .formRow,
-  .formRow2 {
-      grid-template-columns: 1fr; /* Muda para apenas uma coluna */
+/* Responsividade */
+@media (max-width: 810px) {
+  .formRow, .formRow2 {
+    flex-direction: column;
   }
 
   .formGroup {
-      margin-bottom: 20px;
+    width: 100%;
+    align-items: flex-start;
   }
 
-  .submitButton {
-      margin-top: 20px;
+  .formGroup input, 
+  .formGroup label {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 28px;
   }
 }
 
-/* Ajustes extras para celulares muito pequenos (max-width: 480px) */
 @media (max-width: 480px) {
   .form {
-      padding: 15px;
-      width: 100%;
-      
-  }
-  textarea{
-    height:10%;
-    width: 10%;
-  }
-  h2 {
-      font-size: 28px;
+    padding: 15px;
+    width: 95%;
   }
 
-  .formGroup input,
-  .formGroup textarea {
-      padding: 10px;
-      font-size: 14px;
+  h2 {
+    font-size: 24px;
   }
 
   .submitButton {
-      padding: 12px 16px;
-      font-size: 16px;
+    padding: 12px 16px;
+    font-size: 16px;
   }
 }

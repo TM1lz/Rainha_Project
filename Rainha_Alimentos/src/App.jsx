@@ -7,9 +7,18 @@ import Contact from './pages/Contact/Contact';
 import HambInfo from './pages/hambuguer/HambInfo';
 import Dont_Fout from './pages/Product/Dont_Fout';
 import Almondegainfo from './pages/almondega/Almondegainfo';
+import { use, useEffect } from 'react';
 
 
 function App() {
+  useEffect(() => {
+    console.log(
+      "%c🚧🚨 Atenção, desenvolvedor! 🚨🚧\n\n" +
+      "Esta área é destinada apenas para desenvolvedores.\n" +
+      "Se você não é um, por favor, volte para a superfície! 🌊👋",
+      "color: red; font-size: 16px; font-weight: bold; background-color: yellow; padding: 8px;"
+    );
+  }, []);
   return (
     <>
     <Router> {/* Envolva tudo no Router */}
