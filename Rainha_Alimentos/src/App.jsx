@@ -7,7 +7,7 @@ import Contact from './pages/Contact/Contact';
 import HambInfo from './pages/hambuguer/HambInfo';
 import Dont_Fout from './pages/Product/Dont_Fout';
 import Almondegainfo from './pages/almondega/Almondegainfo';
-import { use, useEffect } from 'react';
+import { useEffect } from 'react';
 
 
 function App() {
