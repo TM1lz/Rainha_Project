@@ -26,7 +26,7 @@ export default function NavBar() {
       <div className={`${styler.nav_menu} ${isMenuOpen ? styler.open : ''}`}>
         <ul>
           <li>
-            <NavLink to="/" className={({ isActive }) => (isActive ? styler.active : '')}>Home</NavLink>
+            <NavLink to="/Rainha_Project" className={({ isActive }) => (isActive ? styler.active : '')}>Home</NavLink>
           </li>
           <li>
             <NavLink to="/company" className={({ isActive }) => (isActive ? styler.active : '')}>Empresa</NavLink>
