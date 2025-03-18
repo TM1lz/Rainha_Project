@@ -26,16 +26,16 @@ export default function NavBar() {
       <div className={`${styler.nav_menu} ${isMenuOpen ? styler.open : ''}`}>
         <ul>
           <li>
-            <NavLink to="/Rainha_Project" className={({ isActive }) => (isActive ? styler.active : '')}>Home</NavLink>
+            <NavLink onClick={()=>{setIsMenuOpen(false)}} to="/Rainha_Project" className={({ isActive }) => (isActive ? styler.active : '')}>Home</NavLink>
           </li>
           <li>
-            <NavLink to="/company" className={({ isActive }) => (isActive ? styler.active : '')}>Empresa</NavLink>
+            <NavLink onClick={()=>{setIsMenuOpen(false)}} to="/company" className={({ isActive }) => (isActive ? styler.active : '')}>Empresa</NavLink>
           </li>
           <li>
-            <NavLink to="/product" className={({ isActive }) => (isActive ? styler.active : '')}>Produtos</NavLink>
+            <NavLink onClick={()=>{setIsMenuOpen(false)}} to="/product" className={({ isActive }) => (isActive ? styler.active : '')}>Produtos</NavLink>
           </li>
           <li>
-            <NavLink to="/conect" className={({ isActive }) => (isActive ? styler.active : '')}>Contato</NavLink>
+            <NavLink onClick={()=>{setIsMenuOpen(false)}}  to="/conect" className={({ isActive }) => (isActive ? styler.active : '')}>Contato</NavLink>
           </li>
         </ul>
       </div>

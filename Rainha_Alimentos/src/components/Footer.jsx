@@ -2,7 +2,7 @@ import styler from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className={styler.footer}>
       <p className={styler.pa}>
         &copy; RAINHA ALIMENTOS 2025. Todos direitos reservados.
       </p>
@@ -44,10 +44,10 @@ const Footer = () => {
           </svg>
         </a>
       </div>
-        <p className={styler.pa}>
-          Rua Luiza Pereira de Carvalho, 165 Jardim Manchester (Nova Veneza)
-          Sumaré, São Paulo - (19) 3922-5200 contato@rainhaalimentos.ind.br
-        </p>
+      <p className={styler.pa}>
+        Rua Luiza Pereira de Carvalho, 165 Jardim Manchester (Nova Veneza)
+        Sumaré, São Paulo - (19) 3922-5200 contato@rainhaalimentos.ind.br
+      </p>
     </footer>
   );
 };

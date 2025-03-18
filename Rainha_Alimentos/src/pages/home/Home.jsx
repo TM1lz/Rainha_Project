@@ -70,7 +70,7 @@ export default function Home() {
               Como nosso representante, você terá acesso a produtos de alta excelência, suporte dedicado  
               e uma parceria sólida para impulsionar seus negócios.  
             </p>
-            <NavLink to='/teste' className={styler.botao}>JUNTE-SE </NavLink>
+            <NavLink to='/conect' className={styler.botao}>JUNTE-SE </NavLink>
           </div>
     </div>
   );

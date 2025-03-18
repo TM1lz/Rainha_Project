@@ -1,97 +1,121 @@
 footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Permite que os elementos se ajustem em várias linhas */
 }
+
 .pa {
-    margin: 0px 10px 0px 10px;
-    max-width: 25%;
+  margin: 0px 10px;
+  max-width: 25%;
+  white-space: normal; /* Quebra de linha normal */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
+
 .location {
-    margin-top: 10px;
+  margin-top: 10px;
 }
-/* From Uiverse.io by vinodjangid07 */ 
+
 .card {
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 25px 25px;
-    gap: 20px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
-  }
-  
-  /* for all social containers*/
-  .socialContainer {
-    
-    width: 52px;
-    height: 52px;
-    background-color: rgb(73, 73, 73);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    transition-duration: .3s;
-    border-radius: 50%;
-  }
-  /* instagram*/
-  .containerOne:hover {
-    background-color: #d62976;
-    transition-duration: .3s;
-  }
-  /* twitter*/
-  .containerTwo:hover {
-    background-color: #00acee;
-    transition-duration: .3s;
-  }
-  /* linkdin*/
-  .containerThree:hover {
-    background-color: #0072b1;
-    transition-duration: .3s;
-  }
-  /* Whatsapp*/
-  .containerFour:hover {
-    background-color: #128C7E;
-    transition-duration: .3s;
-  }
-  
-  .socialContainer:active {
-    transform: scale(0.9);
-    transition-duration: .3s;
-  }
-  
-  .socialSvg {
-    width: 17px;
-  }
-  
-  .socialSvg path {
-    fill: rgb(255, 255, 255);
-  }
-  
-  .socialContainer:hover .socialSvg {
-    animation: slide-in-top 0.3s both;
-  }
-  
-  @keyframes slide-in-top {
-    0% {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  flex-wrap: wrap; /* Para permitir que os itens se ajustem em dispositivos menores */
+}
+
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(73, 73, 73);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+  border-radius: 50%;
+}
+
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
       transform: translateY(-50px);
       opacity: 0;
-    }
-  
-    100% {
+  }
+  100% {
       transform: translateY(0);
       opacity: 1;
-    }
   }
-  @media screen and (max-width: 768px) {
-    .card{
-        display: none;
-    }
+}
 
+/* Responsividade para telas menores */
+@media screen and (max-width: 768px) {
+  footer {
+      flex-direction: column; /* Empilha os itens verticalmente */
+      text-align: center; /* Centraliza o texto */
   }
-  
+
+  .pa {
+      max-width: 100%; /* Faz com que cada item ocupe 100% da largura disponível */
+      margin-bottom: 10px;
+  }
+
+  .card {
+      margin-bottom: 20px;
+  }
+
+  .socialContainer {
+      margin: 5px;
+      width: 45px; /* Reduz o tamanho dos ícones sociais */
+      height: 45px;
+  }
+
+  .socialSvg {
+      width: 15px; /* Ajusta o tamanho do ícone */
+  }
+}
