@@ -8,6 +8,9 @@ import HambInfo from './pages/hambuguer/HambInfo';
 import Dont_Fout from './pages/Product/Dont_Fout';
 import Almondegainfo from './pages/almondega/Almondegainfo';
 import { useEffect } from 'react';
+import Adm from './private/routes/Adm';
+import PrivateRoutes from './private/PrivateRoutes';
+import Login from './private/routes/Login';
 
 
 function App() {
@@ -25,12 +28,15 @@ function App() {
       <div className="container-app">
         <NavBar />       
         <Routes> 
-          <Route path="/" element = {<Home/>} />
+          <Route path="/Rainha_Project" element = {<Home/>} />
           <Route path="/company" element= {<About/>} />
           <Route path="/product" element={<Dont_Fout/>}/> 
           <Route path="/conect" element={<Contact/>}/> 
           <Route path="/hamburguer" element={<HambInfo/>}/> 
           <Route path="/almondega" element={<Almondegainfo/>}/> 
+          <Route path="/login" element={<Login/>} />
+          <Route path="/adm" element={
+          <PrivateRoutes><Adm/></PrivateRoutes> } />
         </Routes>
       </div>
     </Router>

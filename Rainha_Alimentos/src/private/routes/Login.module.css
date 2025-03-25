@@ -1,0 +1,90 @@
+/* src/pages/Login.module.css */
+
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8f9fa; /* Fundo claro e suave para contrastar com a cor base */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte limpa */
+    color: #333; /* Cor do texto */
+  }
+  
+  .loginImage img {
+    width: 8rem; /* Tamanho adequado para a imagem */
+    margin-bottom: 20px;
+  }
+  
+  .loginForm {
+    background-color: #6b6b6b; /* Fundo branco para o formulário */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    width: 100%; /* A largura será de 100% do seu contêiner pai */
+    max-width: 450px; /* Definir largura máxima para o formulário */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Faz os inputs ocuparem toda a largura */
+    box-sizing: border-box; /* Garantir que o padding não afete a largura total */
+  }
+  
+  .loginForm h2 {
+    margin-bottom: 30px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #DE0B27; /* Cor base para o título */
+    text-align: center; /* Alinha o título no centro */
+  }
+  
+  .formGroup {
+    width: 100%; /* Garante que o campo ocupe toda a largura */
+    margin-bottom: 20px;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #666; /* Cor mais suave para o texto */
+  }
+  
+  .formGroup input {
+    width: 100%; /* Garante que os inputs ocupem toda a largura disponível */
+    padding: 12px;
+    border: 1px solid #ccc; /* Borda sutil */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 14px;
+    color: #333;
+    background-color: #f8f9fa; /* Fundo suave nos inputs */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transições suaves */
+    box-sizing: border-box; /* Evita que o padding afete a largura */
+  }
+  
+  .formGroup input:focus {
+    border-color: #DE0B27; /* Destacar a borda ao focar com a cor base */
+    outline: none; /* Retirar o outline */
+    box-shadow: 0 0 5px rgba(222, 11, 39, 0.4); /* Adicionar sombra suave ao focar */
+  }
+  
+  button {
+    padding: 12px 20px;
+    background-color: #DE0B27; /* Cor base para o botão */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%; /* Garante que o botão ocupe toda a largura */
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Evita que o padding afete a largura */
+  }
+  
+  button:hover {
+    background-color: #b5061f; /* Cor mais escura no hover */
+  }
+  
+  button:active {
+    background-color: #a3051a; /* Cor ainda mais escura ao clicar */
+  }
+  

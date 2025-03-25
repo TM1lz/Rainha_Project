@@ -3,40 +3,43 @@ import { useState } from "react";
 import styler from "./Forms.module.css";
 
 export default function Forms() {
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-        reset
-    } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset
+  } = useForm();
 
-    const [responseMessage, setResponseMessage] = useState(null); // <- Aqui vamos guardar a resposta
+  const [responseMessage, setResponseMessage] = useState(null); 
+  const [isError, setIsError] = useState(false); // Novo estado para definir se é erro
 
-    const onSubmit = async (data) => {
-        try {
-            const response = await fetch("http://localhost:3080/clients", { // URL do backend
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
-            });
+  const onSubmit = async (data) => {
+    try {
+      const response = await fetch("http://localhost:3080/clients", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-            const result = await response.json(); // Pega o JSON
+      const result = await response.json();
 
-            if (response.ok) {
-                setResponseMessage(result.message); // Mostra mensagem de sucesso
-                reset(); // Limpa o formulário
-            } else {
-                setResponseMessage("Erro ao enviar formulário"); // Mostra mensagem de erro
-            }
+      if (response.ok) {
+        setResponseMessage(result.message); // Sucesso
+        setIsError(false); // Remove estado de erro
+        reset();
+      } else {
+        setResponseMessage(result.error || "Erro ao enviar formulário."); // Erro vindo do backend
+        setIsError(true); // Marca como erro
+      }
 
-        } catch (error) {
-            setResponseMessage("Erro ao enviar formulário verifique sua conexão");
-            console.log(error) // Mostra mensagem de erro
-        }
-    };
-
+    } catch (error) {
+      setResponseMessage("Erro ao enviar formulário. Verifique sua conexão.");
+      setIsError(true);
+      console.log(error);
+    }
+  };
     return (
         <div className={styler.form}>
             <h2>Cadastro</h2>
