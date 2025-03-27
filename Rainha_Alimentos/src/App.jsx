@@ -12,7 +12,6 @@ import Adm from './private/routes/Adm';
 import PrivateRoutes from './private/PrivateRoutes';
 import Login from './private/routes/Login';
 
-
 function App() {
   useEffect(() => {
     console.log(
@@ -24,9 +23,10 @@ function App() {
   }, []);
   return (
     <>
-    <Router> {/* Envolva tudo no Router */}
+    
+      <Router> {/* Envolva tudo no Router */}
       <div className="container-app">
-        <NavBar />       
+        <NavBar />
         <Routes> 
           <Route path="/Rainha_Project" element = {<Home/>} />
           <Route path="/company" element= {<About/>} />
@@ -36,7 +36,9 @@ function App() {
           <Route path="/almondega" element={<Almondegainfo/>}/> 
           <Route path="/login" element={<Login/>} />
           <Route path="/adm" element={
-          <PrivateRoutes><Adm/></PrivateRoutes> } />
+          <PrivateRoutes>
+            <Adm/>
+          </PrivateRoutes> } />
         </Routes>
       </div>
     </Router>

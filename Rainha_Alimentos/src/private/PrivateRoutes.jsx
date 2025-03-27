@@ -1,14 +1,12 @@
+
 import { Navigate } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import Adm from './routes/Adm';
 
-export default function PrivateRoutes({ children }) {
-    // Verifica se o token está armazenado no localStorage ou sessionStorage
-    const token = localStorage.getItem('authToken');  // Ou sessionStorage.getItem('authToken') dependendo de como está armazenando
-
-    // Se o token existir, considera o usuário autenticado
-    return token ? children : <Navigate to="/Login" />; // Redireciona para a home se não autenticado
-}
-
-PrivateRoutes.propTypes = {
-  children: PropTypes.node.isRequired,
+const PrivateRoutes = () => {
+  const token  = localStorage.getItem('authToken');
+  // Get the token from local storage
+   // Check if the token exists in local storage
+  return !token ?  <Navigate to="/login" /> : <Adm />;
 };
+
+export default PrivateRoutes;
