@@ -6,7 +6,6 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
     "serve": "vite preview",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -16,7 +15,8 @@
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-hook-form": "^7.54.2"
+    "react-hook-form": "^7.54.2",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
