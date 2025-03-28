@@ -1,46 +1,44 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
+import { redirect, useNavigate } from "react-router-dom";
 
-import logo from '../../assets/logo.png';  // Importando a imagem do logo
-import styles from './Login.module.css';  // Importando o CSS module
+import logo from "../../assets/logo.png"; // Importando a imagem do logo
+import styles from "./Login.module.css"; // Importando o CSS module
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
+    setError("");
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:3001/user/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("http://localhost:3001/user/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
       });
 
-      if (!response.ok) {
-        throw new Error('Erro ao fazer login. Verifique suas credenciais.');
-      }
-
       const data = await response.json();
 
-      if (data.token) {
-        localStorage.setItem('authToken', data.token);
-        localStorage.setItem('email', email);
-        localStorage.setItem('password', password);
-      } else {
-        throw new Error(data.error || 'Erro desconhecido.');
+      if (!response.ok) {
+        throw new Error(data.error || "Erro ao realizar login.");
       }
+
+      localStorage.setItem("authToken", data.token);
+      localStorage.setItem("email", data.email);
+      console.log("Login bem-sucedido:", data.token);
+      
+      redirect("/adm"); // Redireciona para a página de administração
+      navigate("/adm"); // Redireciona para a página de administração
     } catch (error) {
       setError(error.message);
     } finally {
       setLoading(false);
-      navigate('/adm');
     }
   };
 
@@ -76,9 +74,9 @@ const Login = () => {
         </div>
 
         {error && <p className={styles.error}>{error}</p>}
-        
+
         <button type="submit" disabled={loading}>
-          {loading ? 'Entrando...' : 'Entrar'}
+          {loading ? "Entrando..." : "Entrar"}
         </button>
       </form>
     </div>

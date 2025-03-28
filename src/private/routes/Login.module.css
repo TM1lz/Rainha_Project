@@ -46,7 +46,7 @@
     display: block;
     margin-bottom: 8px;
     font-weight: 500;
-    color: #666; /* Cor mais suave para o texto */
+    color: #fdfdfd; /* Cor mais suave para o texto */
   }
   
   .formGroup input {
@@ -87,4 +87,9 @@
   button:active {
     background-color: #a3051a; /* Cor ainda mais escura ao clicar */
   }
-  
+  .error {
+    color: #f75252d0; /* Vermelho para mensagens de erro */
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center; /* Centraliza a mensagem de erro */
+  }
