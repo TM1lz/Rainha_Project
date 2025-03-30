@@ -9,7 +9,7 @@ const Adm = () => {
   useEffect(() => {
     const token = localStorage.getItem("authToken");
 
-    fetch("http://localhost:3001/cliente", {
+    fetch("https://back-end-rainha-alimentos.vercel.app/cliente", {
       method: "GET",
       headers: {
         "Authorization": `Bearer ${token}`,
