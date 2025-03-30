@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styler from "./NavBar.module.css";
-import logo from "../assets/logo.png";
+import logoRainha from "../assets/logoRainha.png";
+
+
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +15,7 @@ export default function NavBar() {
   return (
     <div className={styler.container}>
       <div className={styler.logo_nav}>
-        <img className={styler.logo} src={logo} alt="Logo" />
+        <NavLink to="/login"><img className={styler.logo} src={logoRainha} alt="Logo" /></NavLink>
       </div>
       
       {/* Ícone Hambúrguer */}

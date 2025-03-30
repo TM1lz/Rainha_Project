@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { redirect, useNavigate } from "react-router-dom";
 
-import logo from "../../assets/logo.png"; // Importando a imagem do logo
+import logo from "../../assets/logoRainha.png"; // Importando a imagem do logo
 import styles from "./Login.module.css"; // Importando o CSS module
 
 const Login = () => {
@@ -17,7 +17,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:3001/user/login", {
+      const response = await fetch("https://back-end-rainha-alimentos.vercel.app/user/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

@@ -1,7 +1,7 @@
 import styles from './About.module.css';
 
-import img from '../../assets/logo.png';
-import brasilMap from "../../assets/BrasilMaps.png";
+import logoRainha from '../../assets/logoRainha.png';
+import brasilMap from "../../assets/img/BrasilMap.png";
 const logos = [
   "https://www.rainhaalimentos.ind.br/public/arquivos/upload/4c4cbd55ac1604e2921a7a2ca4672580.jpg",
   "https://www.rainhaalimentos.ind.br/public/arquivos/upload/049b944fd82e47d0b9d3233ab197c137.jpg",
@@ -22,7 +22,7 @@ const About = () => {
       <div className={styles.content}>
         <div className={styles.image}>
         <img
-          src={img}
+          src={logoRainha}
           alt="Rainha Alimentos"
         />
         </div>

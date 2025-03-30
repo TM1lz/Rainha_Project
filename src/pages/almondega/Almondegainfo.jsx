@@ -1,7 +1,7 @@
 import styles from './Almondegainfo.module.css';
 
-import imgAlmondegaBovino from "../../assets/wall.img/amlgjpeg.jpg";
-import imgAlmondegaMista from "../../assets/wall.img/amlgjpeg.jpg";
+import imgAlmondegaBovino from "../../assets/img/AlmondegaP.jpg";
+import imgAlmondegaMista from "../../assets/img/AlmondegaP.jpg";
 
 const Almondegainfo = () => {
 

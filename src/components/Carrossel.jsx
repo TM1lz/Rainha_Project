@@ -2,17 +2,17 @@ import styles from './Carrosel.module.css';
 import { useState, useEffect } from 'react';
 
 // Importar a imagem corretamente do diretório assets
-import img1 from '../assets/wall.img/hbwall.jpg';
-import img2 from '../assets/wall.img/kbwall.jpg';
-import img3 from '../assets/wall.img/almwall.jpg';
+import imgHamb from '../assets/img/HamburguerW.jpg';
+import imgKibe from '../assets/img/KibeW.jpg';
+import imgAlmond from '../assets/img/AlmondegaW.jpg';
 
 
 function Carrosel() {
   // Defina as imagens manualmente
   const data = [
-    { id: 0, img: img1 },
-    {id: 1 , img: img2 }, 
-    {id: 2 , img: img3 }
+    { id: 0, img: imgHamb },
+    {id: 1 , img: imgKibe }, 
+    {id: 2 , img: imgAlmond }
     // Adicione mais imagens conforme necessário
   ];
 

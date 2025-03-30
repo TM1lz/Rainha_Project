@@ -1,7 +1,7 @@
 
 import styles from "./HambInfo.module.css";
-import imgHambBovino from "../../assets/wall.img/hambjpeg.jpg";
-import imgHambMisto from "../../assets/wall.img/hambmistojpeg.jpg";
+import imgHambBovino from "../../assets/img/HamburguerPBovino.jpg";
+import imgHambMisto from "../../assets/img/HamburguerPMisto.jpg";
 
 const HambInfo = () => {
   const burgers = [

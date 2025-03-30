@@ -2,10 +2,10 @@ import Carrosel from "../../components/Carrossel";
 import styler from "./Home.module.css";
 import { NavLink } from "react-router-dom";
 
-import img from '../../assets/logo.png';
-import almdg from '../../assets/wall.img/amlgjpeg.jpg';
-import hambg from '../../assets/wall.img/hambjpeg.jpg';
-import kibe from '../../assets/wall.img/kibejpeg.jpg';
+import logoRainha from '../../assets/logoRainha.png';
+import imgAlmondegaBovino from "../../assets/img/AlmondegaP.jpg";
+import imgHambBovino from "../../assets/img/HamburguerPBovino.jpg";
+import imgKibe from '../../assets/img/KibeP.jpg';
 import TesteCard from "../../components/BemVindoCard";
 
 export default function Home() {
@@ -29,7 +29,7 @@ export default function Home() {
           <NavLink to="/hamburguer" className={styler.botao}>SAIBA MAIS</NavLink>
         </div>
         <div className={styler.img_hamb}>
-          <img src={hambg} alt="Hambúrguer Artesanal" />
+          <img src={imgHambBovino} alt="Hambúrguer Artesanal" />
         </div>
       </div>
 
@@ -44,7 +44,7 @@ export default function Home() {
           <NavLink to="/almondega" className={styler.botao}>SAIBA MAIS</NavLink>
         </div>
         <div className={styler.img_almdg}>
-          <img src={almdg} alt="Almôndegas Saborosas" />
+          <img src={imgAlmondegaBovino} alt="Almôndegas Saborosas" />
         </div>
       </div>
 
@@ -59,11 +59,11 @@ export default function Home() {
           <NavLink to="/kibe" className={styler.botao}>SAIBA MAIS</NavLink>
         </div>
         <div className={styler.img_custom}>
-          <img src={kibe} alt="Kibe Crocante" />
+          <img src={imgKibe} alt="Kibe Crocante" />
         </div>
       </div>
       <div className={styler.desc_rainha}>
-            <img src={img} width={500} alt="Logo" />
+            <img src={logoRainha} width={500} alt="Logo" />
             <h1>SEJA NOSSO REPRESENTANTE</h1>
             <p>
               Faça parte da Rainha Alimentos, uma empresa que valoriza qualidade e tradição.  
