@@ -15,7 +15,7 @@ export default function Forms() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch("http://localhost:3080/clients", {
+      const response = await fetch("https://back-end-rainha-alimentos.vercel.app/cliente", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
