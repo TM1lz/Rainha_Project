@@ -20,7 +20,7 @@ export default function Home() {
 
       <div className={styler.box_hamb}>
         <div className={styler.desc_hamb}>
-          <h2>HAMBÚRGUER ARTESANAL</h2>
+          <h2>HAMBÚRGUER</h2>
           <p>
             Feito com ingredientes selecionados e carne 100% bovina, nosso hambúrguer traz o sabor  
             irresistível da tradição. Suculento, macio e perfeito para qualquer ocasião,  
