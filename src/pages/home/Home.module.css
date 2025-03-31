@@ -9,8 +9,8 @@
 .desc_rainha a {
     text-decoration: none;
     color: white;
-    display: flex; /* Faz o link se comportar como um bloco dentro da div */
-    justify-content: center; /* Centraliza o texto */
+    display: flex;
+    justify-content: center;
     align-items: center;
     padding: 10px 20px;
     background-color: #0066cc;
@@ -19,7 +19,7 @@
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    max-width: 250px; /* Garante que o link não fique gigante */
+    max-width: 250px;
     width: 100%;
 }
 
@@ -74,38 +74,6 @@
     color: #0066cc;
     text-align: center;
     margin: 40px 0;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .desc_rainha {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .desc_rainha img {
-        margin-bottom: 20px;
-        max-width: 80%;
-    }
-
-    .desc_rainha h1 {
-        font-size: 2rem;
-    }
-
-    .desc_rainha p {
-        font-size: 1rem;
-        font-weight: bold;
-    }
-
-    .desc_rainha a {
-        width: 100%;
-        font-size: 1rem;
-    }
-
-    .produtos_destaque {
-        font-size: 1.5rem;
-    }
 }
 
 /* Estilização das seções */
@@ -172,19 +140,23 @@
 .img_hamb, .img_custom, .img_almdg {
     flex: 1;
     height: 100%;
-    margin: 0 auto;
+    margin: auto;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    
 }
 
-.img_hamb img , .img_custom img , .img_almdg img {
-    height: 30rem;
+.img_hamb img, .img_custom img, .img_almdg img {
+    width: 20rem;;
+    height: 100%;
+    object-fit: contain;
 }
 
-/* Responsividade para seções */
+/* Responsividade */
 @media (max-width: 768px) {
     .box_hamb, .box_almdg, .box_custom {
         flex-direction: column;
@@ -195,9 +167,7 @@
 
     .img_hamb, .img_almdg, .img_custom {
         margin: 0 auto;
-    }
-    .img_hamb img , .img_custom img , .img_almdg img {
-        height: 20rem;
+        width: 20rem;
     }
 
     .desc_hamb h2, .desc_almdg h2, .desc_custom h2 {
