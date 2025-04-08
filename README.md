@@ -1,5 +1,5 @@
 # Projeto Rainha Alimentos
-
+# Em manutenção — deploy ainda acessível
 ## Imagem do Projeto Inicial
 Aqui está uma imagem do **início do projeto**, mostrando o layout e as primeiras etapas de desenvolvimento:
 
